@@ -1,0 +1,268 @@
+
+
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+    font-family: 'Roboto';
+    font-weight: 800;
+}
+
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+}
+
+h1, h2 {
+    font-family: 'Rubik Glitch', cursive;
+} 
+
+
+
+main {
+    display: flex;
+    border-radius: 1rem;
+    flex-direction: column;
+    padding: em 2em;
+    background-color: rgb(237, 229, 236);
+}
+
+ul,
+ol {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+
+p,
+ul li,
+ol li {
+    font-size: 2.4em;
+    line-height: 1.5;
+    text-align: left;
+    color: #551264;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0.5em 0;
+    padding: 1em 2em;
+}
+
+button,
+input[type='button'],
+input[type='submit'] {
+    border-color: #380745;
+    padding: .05em 1em;
+    background: #53024f;
+    cursor:col-resize;
+    text-align: center;
+    color: #ffffff;
+}
+
+input[type='button']:disabled,
+input[type='submit']:disabled {
+    opacity: 0.8;
+    cursor: not-allowed;
+}
+
+form textarea {
+    margin: 0.5em;
+    border-radius: 05em;
+    border: 1px solid #380745;
+    padding: 1em;
+    background: #e3d0e0;
+    font-weight: 400;
+}
+
+form select {
+    margin: 0.5em 0;
+    border-radius: 0.5em;
+    border: 1px solid #134f5c;
+    padding: 0 0.5em;
+    background: #d0e0e3;
+    font-size: 1.6em;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 2em;
+}
+
+footer ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    list-style: none;
+}
+
+
+footer ul li a {
+    font-family: 'Rubik Glitch', cursive;
+    font-size: 1em;
+    text-decoration: none;
+    color: #380745;
+}
+
+
+p a:hover,
+li a:hover,
+button:hover,
+input[type='button']:hover,
+input[type='submit']:hover {
+    opacity: 0.8;
+}
+
+
+#minicarrito {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em 1em;
+    width: 100%;
+    background: rgba(70, 37, 86, 0.25);
+}
+
+#productos {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1em 0;
+    width: 100%;
+    padding: 1em;
+    background: rgba(19, 79, 92, 0.25);
+}
+
+#productos div {
+
+      width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    padding: 1em;
+}
+
+#productos img {
+    width: 90%;
+    margin: 1em 5%;
+}
+
+
+.modal {
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: auto;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal a {
+    text-decoration: none;
+    color: #d0e0e3;
+}
+
+.modal a.cerrar {
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 1em;
+    right: 1em;
+    border-radius: 2.5em;
+    width: 5em;
+    height: 5em;
+    background-color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+}
+
+.modal a.cerrar:hover {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.modal img {
+    height: 30%;
+}
+
+.modal h3,
+.modal p,
+.modal li {
+    margin: 0;
+    text-align: center;
+    color: #d0e0e3;
+}
+
+.modal li {
+    display: flex;
+    justify-content: space-around;
+    margin: 0.25em 0;
+    width: 90%;
+}
+
+.modal li span {
+    font-size: 1em;
+}
+
+
+@media screen and (min-width: 960px) {
+    #productos {
+        flex-direction: row;
+    }
+
+    #productos div {
+        width: 35%;
+    }
+
+   
+    footer ul {
+        flex-direction: row;
+    }
+}
